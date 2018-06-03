@@ -1,8 +1,8 @@
 -include config.mk
 
-SHAIFHEPATH ?= $(HOME)/HElib/src
-NTLLIBPATH ?= $(HOME)/ntl-6.0.0-bin/lib
-NTLINCPATH ?= $(HOME)/ntl-6.0.0-bin/include
+SHAIFHEPATH ?= $(HOME)/Documents/HElib/src/
+NTLLIBPATH ?= /usr/local/lib/
+NTLINCPATH ?= /usr/local/include/NTL/
 JSONCPP ?= /usr/include/jsoncpp
 
 L_BOOST_SYSTEM ?= -lboost_system
@@ -35,7 +35,7 @@ CXXFLAGS := $(CXXOPT) -fno-strict-aliasing -fwrapv -fPIC \
 	    -fno-omit-frame-pointer -I$(TOP) -I$(SHAIFHEPATH) -I$(NTLINCPATH) -I$(JSONCPP)
 
 
-LDFLAGS	 := -lpthread -lrt -lgmp -lgmpxx -lgf2x
+LDFLAGS	 := -lpthread -lrt -lgmp -lgmpxx 
 LDFLAGS +=  -L$(TOP)/$(OBJDIR) -Wl,-rpath=$(TOP)/$(OBJDIR)
 
 PROTOC ?= protoc
